@@ -41,6 +41,7 @@ const styles = StyleSheet.create({
     width: 218,
     height: 218,
     borderRadius: 18,
+    resizeMode:'contain'
     // borderWidth: 10,
     // borderColor: '#cc1818', // Adds a visible black border
     // backgroundColor:'#fff',
