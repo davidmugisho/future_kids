@@ -27,15 +27,16 @@ const styles = StyleSheet.create({
   text: {
     color: '#fff',
     fontSize:30,
-    top:320,
+    top:200,
     fontWeight:'bold'
+
   },
   Button:{
     fontSize:15,   
     textDecorationLine:'underline',
     color:'#FFFFFF',
-     top:350,
-     left: 'auto'
+     top:250,
+     left: 'auto',
   },
   Image:{
     width: 218,
