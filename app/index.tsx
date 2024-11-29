@@ -1,5 +1,6 @@
-import { Text, View,  StyleSheet,  } from 'react-native';
+import { Text, View,  } from 'react-native';
 import { Image } from 'expo-image';
+import { StyleSheet } from 'react-native';
 
 import { Link } from 'expo-router';
 
@@ -14,7 +15,7 @@ export default function Index() {
     </Link>
     </View>
   );
-}
+}  
 
 const styles = StyleSheet.create({
   container: {
@@ -48,5 +49,5 @@ const styles = StyleSheet.create({
     // backgroundColor:'#fff',
     // opacity: 50, // Fully opaque
   }
-}
-);
+  
+})

@@ -21,10 +21,9 @@ const EllipseWithCircles: React.FC = () => (
 
 export default function SplashScreen() {
   return (
-    <>
-    <StatusBar style='light'/>
+    
     <View style={styles.container}>
-
+<StatusBar style="auto" translucent={true} backgroundColor="black" />
 
       <View style={styles.TopViewheader}>
         <Text style={styles.Topheader}>Skip</Text>
@@ -59,7 +58,7 @@ export default function SplashScreen() {
       </ImageBackground>
 
     </View>
-    </>
+  
   );
 }
 
