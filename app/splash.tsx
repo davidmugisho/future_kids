@@ -21,9 +21,9 @@ const EllipseWithCircles: React.FC = () => (
 
 export default function SplashScreen() {
   return (
-    
+
     <View style={styles.container}>
-<StatusBar style="auto" translucent={true} backgroundColor="black" />
+<StatusBar style="dark" />
 
       <View style={styles.TopViewheader}>
         <Text style={styles.Topheader}>Skip</Text>
@@ -70,6 +70,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-evenly',
     paddingVertical: 20,
     paddingBottom: 40,
+    paddingTop: 40, 
   },
   TopViewheader: {
     top: 60,
@@ -98,8 +99,8 @@ const styles = StyleSheet.create({
     width: 218,
     height: 218,
     resizeMode: 'contain',
-    marginTop: 200,
-    marginBottom: 70,
+    marginTop: 160,
+    marginBottom: 80,
   },
   text: {
     color: '#141718',
