@@ -20,7 +20,7 @@ const EllipseWithCircles: React.FC = () => (
 );
 
 
-export default function SplashScreen() {
+export default function Onboarding1Screen() {
   return (
 
     <View style={styles.container}>
