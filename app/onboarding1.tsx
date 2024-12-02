@@ -11,13 +11,18 @@ import { ImageBackground } from 'react-native';
 const PlaceholderImage = require('../assets/images/hometsx.png');
 const BlurBackgroundImage = require('../assets/images/blurimage.jpeg');
 
-const EllipseWithCircles: React.FC = () => (
+const EllipseWithCircles: React.FC = () => {
+  console.log("Ellipse rendered");
+  return (
+  <Link href='/onboarding1'> 
   <View style={styles.ellipseContainer}>
     <View style={[styles.circle, styles.redCircle]} />
     <View style={[styles.circle, styles.blueBorderCircle]} />
     <View style={[styles.circle, styles.blueBorderCircle]} />
   </View>
+  </Link> 
 );
+};
 
 
 export default function Onboarding1Screen() {
