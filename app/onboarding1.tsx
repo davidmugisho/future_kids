@@ -8,21 +8,21 @@ import { StatusBar } from 'expo-status-bar';
 import { BlurView } from 'expo-blur';
 import { ImageBackground } from 'react-native';
 
-const PlaceholderImage = require('../assets/images/hometsx.png');
+const PlaceholderImage = require('../assets/images/onboarding1.png');
 const BlurBackgroundImage = require('../assets/images/blurimage.jpeg');
 
-const EllipseWithCircles: React.FC = () => {
-  console.log("Ellipse rendered");
-  return (
-  <Link href='/onboarding1'> 
+const EllipseWithCircles: React.FC = () => 
+(
   <View style={styles.ellipseContainer}>
     <View style={[styles.circle, styles.redCircle]} />
     <View style={[styles.circle, styles.blueBorderCircle]} />
-    <View style={[styles.circle, styles.blueBorderCircle]} />
+    <Link href="/onboarding2">
+    <View style={[styles.circle, styles.blueBorderCircle2]} />
+    </Link>
   </View>
-  </Link> 
+
 );
-};
+
 
 
 export default function Onboarding1Screen() {
@@ -37,7 +37,7 @@ export default function Onboarding1Screen() {
 
       <Image source={PlaceholderImage} style={styles.image} />
 
-      <Text style={styles.text}>Welcome to {'\n'}Future Kid</Text>
+      <Text style={styles.text}>Discover Inspiring{'\n'}Future Kid</Text>
 
 
       <ImageBackground source={BlurBackgroundImage} style={styles.blurimage}>
@@ -45,9 +45,9 @@ export default function Onboarding1Screen() {
         <BlurView intensity={128} tint={'light'}  style={styles.blurContainer}>
           <View style={styles.contentContainer}>
           <Text style={styles.textButtonContainer}>
-            Bring your ideas to life. Fund projects, {'\n'}
-            support causes, and join a community {'\n'}
-            of backers
+          Explore campaigns in various,{'\n'}
+          categories and find the causes you’re{'\n'}
+          passionate about.
           </Text>
 
 
@@ -56,7 +56,7 @@ export default function Onboarding1Screen() {
 
           <View style={styles.buttonContainer}>
             <Link href="/splash" style={styles.button}>
-              <Text style={styles.buttonText}>Get Started</Text>
+              <Text style={styles.buttonText}>Explore now</Text>
             </Link>
           </View>
           </View>
@@ -142,11 +142,15 @@ const styles = StyleSheet.create({
     borderRadius: 5,
   },
   redCircle: {
-    backgroundColor: '#3AB6FF',
+    borderColor: '#6c7275',
+    borderWidth: 1.5,
+  },
+  blueBorderCircle2:{
+    borderColor: '#6c7275',
+    borderWidth: 1.5,
   },
   blueBorderCircle: {
-    borderWidth: 1.5,
-    borderColor: '#6c7275',
+    backgroundColor: '#3AB6FF',
   },
   buttonContainer: {
 

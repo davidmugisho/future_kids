@@ -8,23 +8,22 @@ import { StatusBar } from 'expo-status-bar';
 import { BlurView } from 'expo-blur';
 import { ImageBackground } from 'react-native';
 
-const PlaceholderImage = require('../assets/images/hometsx.png');
+const PlaceholderImage = require('../assets/images/onboarding2.png');
 const BlurBackgroundImage = require('../assets/images/blurimage.jpeg');
 
-const EllipseWithCircles: React.FC = () => (
+const EllipseWithCircles: React.FC = () => 
+(
   <View style={styles.ellipseContainer}>
     <View style={[styles.circle, styles.redCircle]} />
-    <Link href="/onboarding1">
-
     <View style={[styles.circle, styles.blueBorderCircle]} />
-    </Link>
-
-    <View style={[styles.circle, styles.blueBorderCircle]} />
+    <View style={[styles.circle, styles.blueBorderCircle2]} />
   </View>
+
 );
 
 
-export default function SplashScreen() {
+
+export default function Onboarding2Screen() {
   return (
 
     <View style={styles.container}>
@@ -36,7 +35,7 @@ export default function SplashScreen() {
 
       <Image source={PlaceholderImage} style={styles.image} />
 
-      <Text style={styles.text}>Welcome to {'\n'}Future Kid</Text>
+      <Text style={styles.text}>Launch Your Own{'\n'}Campaign</Text>
 
 
       <ImageBackground source={BlurBackgroundImage} style={styles.blurimage}>
@@ -44,9 +43,8 @@ export default function SplashScreen() {
         <BlurView intensity={128} tint={'light'}  style={styles.blurContainer}>
           <View style={styles.contentContainer}>
           <Text style={styles.textButtonContainer}>
-            Bring your ideas to life. Fund projects, {'\n'}
-            support causes, and join a community {'\n'}
-            of backers
+          Start your own project and raise funds{'\n'}
+          to bring your ideas to reality{'\n'}
           </Text>
 
 
@@ -55,7 +53,7 @@ export default function SplashScreen() {
 
           <View style={styles.buttonContainer}>
             <Link href="/splash" style={styles.button}>
-              <Text style={styles.buttonText}>Get Started</Text>
+              <Text style={styles.buttonText}>Create a campaign</Text>
             </Link>
           </View>
           </View>
@@ -141,11 +139,16 @@ const styles = StyleSheet.create({
     borderRadius: 5,
   },
   redCircle: {
+    borderColor: '#6c7275',
+    borderWidth: 1.5,
+  },
+  blueBorderCircle2:{
     backgroundColor: '#3AB6FF',
+
   },
   blueBorderCircle: {
-    borderWidth: 1.5,
     borderColor: '#6c7275',
+    borderWidth: 1.5,
   },
   buttonContainer: {
 
