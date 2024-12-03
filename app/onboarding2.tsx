@@ -11,12 +11,13 @@ import { ImageBackground } from 'react-native';
 const PlaceholderImage = require('../assets/images/onboarding2.png');
 const BlurBackgroundImage = require('../assets/images/blurimage.jpeg');
 
-const EllipseWithCircles: React.FC = () => 
-(
+const EllipseWithCircles: React.FC = () => (
   <View style={styles.ellipseContainer}>
     <View style={[styles.circle, styles.redCircle]} />
     <View style={[styles.circle, styles.blueBorderCircle]} />
-    <View style={[styles.circle, styles.blueBorderCircle2]} />
+    <Link href="/onboarding2">
+      <View style={[styles.circle, styles.blueBorderCircle2]} />
+    </Link>
   </View>
 
 );
@@ -27,7 +28,7 @@ export default function Onboarding2Screen() {
   return (
 
     <View style={styles.container}>
-<StatusBar style="dark" />
+      <StatusBar style="dark" />
 
       <View style={styles.TopViewheader}>
         <Text style={styles.Topheader}>Skip</Text>
@@ -39,29 +40,30 @@ export default function Onboarding2Screen() {
 
 
       <ImageBackground source={BlurBackgroundImage} style={styles.blurimage}>
-     <View style={styles.backgroundOverlay} />
-        <BlurView intensity={128} tint={'light'}  style={styles.blurContainer}>
+        <View style={styles.backgroundOverlay} />
+        <BlurView intensity={128} tint={'light'} style={styles.blurContainer}>
           <View style={styles.contentContainer}>
-          <Text style={styles.textButtonContainer}>
-          Start your own project and raise funds{'\n'}
-          to bring your ideas to reality{'\n'}
-          </Text>
+            <Text style={styles.textButtonContainer}>
+            Start your own project and raise funds{'\n'}
+            to bring your ideas to reality{'\n'}
+            
+            </Text>
 
 
-          <EllipseWithCircles />
+            <EllipseWithCircles />
 
 
-          <View style={styles.buttonContainer}>
-            <Link href="/splash" style={styles.button}>
-              <Text style={styles.buttonText}>Create a campaign</Text>
-            </Link>
-          </View>
+            <View style={styles.buttonContainer}>
+              <Link href="/" style={styles.button}>
+                <Text style={styles.buttonText}>Create a campaign</Text>
+              </Link>
+            </View>
           </View>
         </BlurView>
       </ImageBackground>
 
     </View>
-  
+
   );
 }
 
@@ -70,68 +72,65 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#fff',
     alignItems: 'center',
-    justifyContent: 'space-evenly',
+    justifyContent: 'space-between', 
     paddingVertical: 20,
-    paddingBottom: 40,
-    paddingTop: 40, 
+    paddingTop:60,
   },
   TopViewheader: {
-    top: 60,
+
+    position: 'absolute',
+    top: 40,
+    left: 24,
     width: 70,
     height: 40,
-    position: 'absolute',
-    left: 24,
     borderRadius: 12,
     backgroundColor: '#f3f5f7',
     alignItems: 'center',
     justifyContent: 'center',
-    paddingRight: 16,
-    paddingLeft: 16,
-    paddingTop: 8,
-    paddingBottom: 8,
+
   },
   Topheader: {
     fontFamily: 'Inter',
     fontSize: 16,
     fontWeight: 'bold',
-    lineHeight: 24,
-    letterSpacing: 0.5,
+
     color: '#141718',
   },
   image: {
     width: 218,
     height: 218,
     resizeMode: 'contain',
-    marginTop: 160,
-    marginBottom: 80,
+    marginTop: 100,
+    marginBottom: 95,
+
   },
   text: {
     color: '#141718',
-    fontSize: 50,
+    fontSize: 40,
     fontWeight: 'bold',
     textAlign: 'center',
     fontFamily: 'Inter',
-    lineHeight: 65,
+    lineHeight: 55,
     letterSpacing: 0.64,
-    marginBottom: 20,
+    marginVertical: 15,
   },
   textButtonContainer: {
     fontSize: 17,
     fontFamily: 'Karla',
     color: '#6C7275',
-    marginVertical:20,
+    marginVertical: 20,
     textAlign: 'center',
     fontWeight: '400',
     lineHeight: 30,
   },
   ellipseContainer: {
-    width: 65,
+
 
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    marginTop: 20,
-    marginBottom: 20,
+    width: 65,
+    marginVertical: 20,
   },
   circle: {
     width: 10,
@@ -142,19 +141,22 @@ const styles = StyleSheet.create({
     borderColor: '#6c7275',
     borderWidth: 1.5,
   },
-  blueBorderCircle2:{
-    backgroundColor: '#3AB6FF',
+  
 
-  },
   blueBorderCircle: {
     borderColor: '#6c7275',
     borderWidth: 1.5,
+  },
+
+  blueBorderCircle2: {
+    backgroundColor: '#3AB6FF',
+
   },
   buttonContainer: {
 
     alignItems: 'center',
     justifyContent: 'center',
-  
+
   },
   button: {
     width: 311,
@@ -164,7 +166,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     textDecorationLine: 'none',
-    padding: 0,
+    padding:0,
   },
   buttonText: {
     color: '#FEFEFE',
@@ -177,35 +179,35 @@ const styles = StyleSheet.create({
 
   },
   blurContainer: {
-    width: 538, 
-    height: 250, 
+    width: 538,
+    height: 250,
     position: 'absolute',
-    justifyContent: 'center', 
-    alignItems: 'center', 
-    borderRadius: 20, 
-    overflow: 'hidden', 
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: 20,
+    overflow: 'hidden',
 
 
   },
   blurimage: {
-    flex:1,
+    flex: 1,
     width: '100%',
 
     justifyContent: 'center',
     alignItems: 'center',
-    
+
   },
-  backgroundOverlay:{
+  backgroundOverlay: {
     ...StyleSheet.absoluteFillObject,
-    backgroundColor: 'rgba(255, 255, 255, 0.8)', 
+    backgroundColor: 'rgba(255, 255, 255, 0.8)',
 
-
+    
   },
   contentContainer: {
     flex: 1,
-    justifyContent: 'center', 
-    alignItems: 'center', 
+    justifyContent: 'center',
+    alignItems: 'center',
     paddingHorizontal: 20,
-    margin:5,
-    }
+  },
 });
+
