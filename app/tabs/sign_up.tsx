@@ -4,6 +4,10 @@ import { View ,Text,  StyleSheet, Pressable} from 'react-native';
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 
 
+// export const unstable_settings = {
+//   headerShown: false, // This removes the header for this screen
+// };
+
 export default function SignupScreen () {
     return(
       <View style={styles.container}>
