@@ -25,6 +25,7 @@ export default function SignupScreen () {
           <FontAwesome name="phone" color="#000000" size={24} style={styles.icon}/>
           <Text style={styles.buttontext}>Sign up with email</Text>
         </Pressable>
+        <Text style={styles.textsign}>Have an account? Sign in</Text>
       </View>
   );
 };
@@ -39,41 +40,38 @@ const styles = StyleSheet.create({
         borderTopRightRadius: 32,
         paddingTop: 10,
         paddingRight: 32,
-        paddingBottom: 60,
+        paddingBottom: 5,
         paddingLeft: 32,
         gap: 32,
-        // backgroundColor: '#FEFEFE', // You can change this as needed
-        backgroundColor:'#140606',
-          justifyContent: 'center',
-          alignItems: 'center',
+        backgroundColor: '#FEFEFE', 
+        justifyContent: 'center',
+        alignItems: 'center',
           
     },
     text:{
-        color: '#d31212',
-        // color:'#141718'
+        color:'#141718',
         width: 311,
         height: 40,
         fontFamily: 'Inter',
-        fontWeight: '600',
+        fontWeight: '900',
         fontSize: 24,
         lineHeight: 40,
         letterSpacing: -0.48, // -2% letter spacing (24 * -2% = -0.48)
-        textAlign: 'center', //
+        textAlign: 'center', 
     },
     text2:{
-        color: '#d31212',
-        // tintColor:'#6C7275'
+        tintColor:'#6C7275',
         width: 311,
         fontFamily: 'Inter',
         fontWeight: '500',
         fontSize:16,
         lineHeight: 24,
         letterSpacing: -0.48, 
-        textAlign: 'center', 
+        textAlign: 'center',
     },
     button:{
     backgroundColor: '#E8ECEF',
-    borderRadius: 12,
+    borderRadius: 15,
     width: 311,
     height: 56,
     flexDirection: 'row', 
@@ -81,9 +79,10 @@ const styles = StyleSheet.create({
     justifyContent: 'center', 
     paddingHorizontal: 16,
     gap: 8,
+
     },
     buttontext:{
-    fontWeight: '600',
+    fontWeight: '700',
     fontSize: 16,
     lineHeight: 24,
     fontFamily: 'Inter',
@@ -93,6 +92,16 @@ const styles = StyleSheet.create({
     },
     icon:{
          marginRight: 8,
+    },
+    textsign:{
+    paddingHorizontal: 16,
+        width: 325,
+        height:36,
+        fontSize: 14,
+        lineHeight:24,
+        fontWeight:500,
+
+
     }
 
 })
