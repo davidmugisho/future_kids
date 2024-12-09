@@ -1,5 +1,6 @@
 import { Redirect } from 'expo-router';
 import react from 'react';
+import { Link } from 'expo-router';
 import { View ,Text,  StyleSheet, Pressable} from 'react-native';
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 
@@ -16,8 +17,10 @@ export default function SignupScreen () {
           Create your account for a better{'\n'}experience
         </Text>
         <Pressable style={styles.button}>
+          <Link href={"/phoneSign_up"}>
           <FontAwesome name="phone" color="#000000" size={24} style={styles.icon}/>
           <Text style={styles.buttontext}>Sign up with a phone number</Text>
+          </Link>
         </Pressable>
 
         <Pressable style={styles.button}>
@@ -31,7 +34,7 @@ export default function SignupScreen () {
         </Pressable>
         <Text style={styles.textsign}>Have an account? Sign in</Text>
       </View>
-  );
+  );y
 };
 const styles = StyleSheet.create({
     

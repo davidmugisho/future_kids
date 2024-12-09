@@ -54,7 +54,7 @@ export default function SplashScreen() {
 
 
           <View style={styles.buttonContainer}>
-            <Link href="/tabs/sign_up" style={styles.button}>
+            <Link href="/sign_up" style={styles.button}>
               <Text style={styles.buttonText}>Get Started</Text>
             </Link>
           </View>
