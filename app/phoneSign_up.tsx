@@ -12,10 +12,9 @@ import FontAwesome from '@expo/vector-icons/FontAwesome';
 export default function phoneSignScreen () {
     return(
       <View style={styles.container}>
-        <Text>Your Phone number</Text>
-        <Text>Provide your phone number to sign up</Text>
+        <Text style={styles.text}>Your Phone number</Text>
+        <Text style={styles.text1}>Provide your phone number to sign up</Text>
         <Pressable style={styles.button}>
-          <FontAwesome name="google" color="#000000" size={24} style={styles.icon}/>
           <Text style={styles.buttontext}>Phone number</Text>
         </Pressable>
         <View style={styles.buttonContainer}>
@@ -40,7 +39,12 @@ const styles = StyleSheet.create({
     borderRadius: 16, // Optional: Rounded corners
     },
     button:{
-
+      borderRadius: 12,
+      padding : 20,
+      width:311,
+      height:56,
+      gap: 12,
+      backgroundColor:'#F3F5F7'
     },
     buttontext:{
 
@@ -50,6 +54,21 @@ const styles = StyleSheet.create({
     },
     buttonText:{
 
+    },
+    text:{
+      fontSize:40,
+      lineHeight:48,
+      fontWeight:700,
+      color:'#141718'
+    },
+    text1:{
+      fontSize:14,
+      fontWeight: 500,
+      lineHeight:24,
+      color:'#141718',
+      fontFamily:'Inter'
+    
     }
+      
 
   });
