@@ -9,21 +9,20 @@ import FontAwesome from '@expo/vector-icons/FontAwesome';
 //   headerShown: false, // This removes the header for this screen
 // };
 
-export default function phoneSignScreen () {
+export default function verifyPhoneScreen () {
     return(
       <View style={styles.container}>
-        <Text>Your Phone number</Text>
-        <Text>Provide your phone number to sign up</Text>
+        <Text>Verify your number</Text>
+        <Text>Enter verification code sent to 32842224848</Text>
         <Pressable style={styles.button}>
-          <FontAwesome name="google" color="#000000" size={24} style={styles.icon}/>
-          <Text style={styles.buttontext}>Phone number</Text>
+          <Text style={styles.buttontext}>Verification code</Text>
         </Pressable>
         <View style={styles.buttonContainer}>
-            <Link href="/verifyphone" style={styles.button}>
+            <Link href="/setpasswordNumber" style={styles.button}>
               <Text style={styles.buttonText}>Continue</Text>
             </Link>
           </View>
-          <Text>Have an account? Sign in</Text>
+          <Text>Haven’t got the code? Resend code</Text>
       </View>
   );
 };
