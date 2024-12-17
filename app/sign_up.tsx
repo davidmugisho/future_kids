@@ -32,27 +32,16 @@ export default function SignupScreen () {
           <FontAwesome name="phone" color="#000000" size={24} style={styles.icon}/>
           <Text style={styles.buttontext}>Sign up with email</Text>
         </Pressable>
-        <Text style={styles.textsign}>Have an account? Sign in</Text>
+        <Text style={styles.textsign}>Have an account? Sign in{' '}
+          <Text style={{color :'red'}}>Sign in</Text>
+        </Text>
       </View>
   );
 };
 const styles = StyleSheet.create({
     
     container:{
-        // // width: 375,
-        // height: 494,
-        // // top: 1158,
-        // // left: 1048,
-        // borderTopLeftRadius: 32,
-        // borderTopRightRadius: 32,
-        // paddingTop: 10,
-        // paddingRight: 32,
-        // paddingBottom: 5,
-        // paddingLeft: 32,
-        // gap: 32,
-        // backgroundColor: '#FEFEFE', 
-        // justifyContent: 'center',
-        // alignItems: 'center',
+        
         width: 311, // Fixed width
         height: 368, // Hug height
         marginTop: 180, // Top offset
