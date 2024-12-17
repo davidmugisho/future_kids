@@ -9,22 +9,24 @@ import FontAwesome from '@expo/vector-icons/FontAwesome';
 //   headerShown: false, // This removes the header for this screen
 // };
 
-export default function verifyPhoneScreen () {
+export default function setPasswordNumber () {
     return(
       <View style={styles.container}>
-        <Text style={styles.text}>Verify your number</Text>
-        <Text style={styles.text1}>Enter verification code sent to{' '}
-          <Text style={{color:'blue'}}>32842224848</Text>
-        </Text>
+        <Text style={styles.text}>Set your password</Text>
+        <Text style={styles.text1}>Set the password for your account</Text>
         <Pressable style={styles.inputContainer}>
-          <Text style={styles.buttonText}>Verification code</Text>
+          <Text style={styles.buttonText}>Password</Text>
         </Pressable>
+
+        <Pressable style={styles.inputContainer1}>
+          <Text style={styles.buttonText}>Confirm Password</Text>
+        </Pressable>
+
         <View style={styles.buttonContainer}>
-            <Link href="/setpasswordnumber">
-              <Text style={styles.buttonText1}>Continue</Text>
+            <Link href="/white">
+              <Text style={styles.buttonText1}>Submit</Text>
             </Link>
           </View>
-          <Text style={styles.text2}>Haven’t got the code? Resend code</Text>
       </View>
   );
 };
@@ -41,43 +43,20 @@ const styles = StyleSheet.create({
     borderRadius: 16, // Optional: Rounded corners
     },
     text:{
-    fontSize:45,
-    lineHeight: 48,
-    fontWeight: '700',
-    color: '#141718',
+      fontSize:45,
+      lineHeight: 48,
+      fontWeight: '700',
+      color: '#141718',
     },
-    text1: {
+    text1:{
       fontSize: 14,
       fontWeight: '500',
       lineHeight: 24,
       color: '#141718',
       fontFamily: 'Inter',
     },
-    inputContainer: {
-      // flexDirection: 'row',
-      alignItems: 'flex-start',
-      justifyContent:'center',
-      borderRadius: 12,
-      paddingHorizontal: 12,
-      width: 311,
-      height: 60,
-      backgroundColor: '#F3F5F7',
-    },
-    text2:{
-      fontSize:14,
-      lineHeight:24,
-      fontWeight:500,
-      fontFamily:'Inter',
-      letterSpacing:0.12,
-      color:'#141718'
-    },
-    buttonText1:{
-      color: '#FEFEFE',
-      fontSize: 16,
-      fontWeight: '600',
-      lineHeight: 24,
-      fontFamily: 'Inter',
-      letterSpacing: 0.24,
+    button:{
+
     },
     buttonContainer:{
       backgroundColor: '#020A3C',
@@ -86,6 +65,7 @@ const styles = StyleSheet.create({
       borderRadius: 12,
       justifyContent: 'center',
       alignItems: 'center',
+
     },
     buttonText:{
       fontFamily:'Inter',
@@ -94,7 +74,34 @@ const styles = StyleSheet.create({
       lineHeight:24,
       letterSpacing:0.12,
       color:'#6C7275'
+    },
+    inputContainer:{
+        // flexDirection: 'row',
+        alignItems: 'flex-start',
+        justifyContent:'center',
+        borderRadius: 12,
+        paddingHorizontal: 12,
+        width: 311,
+        height: 60,
+        backgroundColor: '#F3F5F7',
+    },
+    inputContainer1:{
+        // flexDirection: 'row',
+        alignItems: 'flex-start',
+        justifyContent:'center',
+        borderRadius: 12,
+        paddingHorizontal: 12,
+        width: 311,
+        height: 60,
+        backgroundColor: '#F3F5F7',
 
+    },
+    buttonText1:{
+      color: '#FEFEFE',
+      fontSize: 16,
+      fontWeight: '600',
+      lineHeight: 24,
+      fontFamily: 'Inter',
+      letterSpacing: 0.24,
     }
-
   });
