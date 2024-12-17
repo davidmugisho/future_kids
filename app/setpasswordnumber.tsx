@@ -23,7 +23,7 @@ export default function setPasswordNumber () {
         </Pressable>
 
         <View style={styles.buttonContainer}>
-            <Link href="/white">
+            <Link href="/loading">
               <Text style={styles.buttonText1}>Submit</Text>
             </Link>
           </View>
