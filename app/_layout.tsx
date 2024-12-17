@@ -14,8 +14,8 @@ export default function RootLayout() {
   <Stack.Screen name="onboarding2" options={{ title:'onboarding2', headerShown:false , headerLeft:() => <></> }}/>
   <Stack.Screen name="sign_up" options={{ title:'Sign up' ,headerShown: false,  headerLeft : () => <></>}}/>
   <Stack.Screen name="phoneSign_up" options={{ title: 'phoneSign up', headerShown: false , headerLeft:() => <></>}}/>
-  <Stack.Screen name="verifyPhone" options={{ title: 'verifyphone', headerShown: false}}/>
-  <Stack.Screen name="setPasswordNumber" options={{ title: 'set password ', headerShown: false , headerLeft:() => <></>}}/>
+  <Stack.Screen name="verifyPhone" options={{ headerShown: false }} />
+<Stack.Screen name="setPasswordNumber" options={{ headerShown: false }} />
   <Stack.Screen name="loading" options={{ headerShown: false }} />
 
   </Stack>

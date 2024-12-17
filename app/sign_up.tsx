@@ -69,7 +69,7 @@ const styles = StyleSheet.create({
         height: 40,
         fontFamily: 'Inter',
         fontWeight: '900',
-        fontSize: 24,
+        fontSize: 26,
         lineHeight: 40,
         letterSpacing: -0.48, // -2% letter spacing (24 * -2% = -0.48)
         textAlign: 'center', 
@@ -107,6 +107,7 @@ const styles = StyleSheet.create({
     },
     icon:{
          marginRight: 8,
+        
     },
     textsign:{
     paddingHorizontal: 16,

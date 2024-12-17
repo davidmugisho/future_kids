@@ -169,7 +169,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
   },
   text: {
-    fontSize: 24,
+    fontSize: 45,
     fontWeight: 'bold',
     color: '#141718',
     marginBottom: 10,
