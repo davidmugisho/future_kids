@@ -34,26 +34,34 @@ export default function SignupScreen () {
         </Pressable>
         <Text style={styles.textsign}>Have an account? Sign in</Text>
       </View>
-  );y
+  );
 };
 const styles = StyleSheet.create({
     
     container:{
-        // width: 375,
-        height: 494,
-        // top: 1158,
-        // left: 1048,
-        borderTopLeftRadius: 32,
-        borderTopRightRadius: 32,
-        paddingTop: 10,
-        paddingRight: 32,
-        paddingBottom: 5,
-        paddingLeft: 32,
-        gap: 32,
-        backgroundColor: '#FEFEFE', 
-        justifyContent: 'center',
-        alignItems: 'center',
-          
+        // // width: 375,
+        // height: 494,
+        // // top: 1158,
+        // // left: 1048,
+        // borderTopLeftRadius: 32,
+        // borderTopRightRadius: 32,
+        // paddingTop: 10,
+        // paddingRight: 32,
+        // paddingBottom: 5,
+        // paddingLeft: 32,
+        // gap: 32,
+        // backgroundColor: '#FEFEFE', 
+        // justifyContent: 'center',
+        // alignItems: 'center',
+        width: 311, // Fixed width
+        height: 368, // Hug height
+        marginTop: 180, // Top offset
+        marginLeft: 32, // Left offset 
+        gap: 32, // Vertical gap (spacing between children)
+        backgroundColor: '#EFEFEF', // Optional: Background color
+        justifyContent: 'center', // Center items vertically
+        alignItems: 'center', // Center items horizontally
+        borderRadius: 16, // Optional: Rounded corners  
     },
     text:{
         color:'#141718',
