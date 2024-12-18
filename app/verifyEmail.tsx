@@ -15,7 +15,7 @@ export default function verifyEmailScreen () {
         <Text style={styles.text}>Verify your 
         email</Text>
         <Text style={styles.text1}>Enter verification code sent to{' '}
-          <Text style={{color:'blue'}}>32842224848</Text>
+          <Text style={{color:'blue'}}> mail@mail.com</Text>
         </Text>
         <Pressable style={styles.inputContainer}>
           <Text style={styles.buttonText}>Verification code</Text>

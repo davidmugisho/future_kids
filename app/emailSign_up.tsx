@@ -52,7 +52,9 @@ export default function emailSign_upScreen() {
           <Text style={styles.buttonText}>Continue</Text>
         </Link>
       </Pressable>
-      <Text style={styles.text2}>Have an account? Sign in</Text>
+      <Text style={styles.text2}>Have an account? 
+        <Text style={{color:'red'}}>Sign in</Text>
+      </Text>
 
     </KeyboardAvoidingView>
   );
