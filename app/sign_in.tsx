@@ -9,35 +9,34 @@ import FontAwesome from '@expo/vector-icons/FontAwesome';
 //   headerShown: false, // This removes the header for this screen
 // };
 
-export default function SignupScreen () {
+export default function signinScreen () {
     return(
       <View style={styles.container}>
-        <Text style={styles.text}>Set up your account</Text>
+        <Text style={styles.text}>Sign into your account</Text>
         <Text style={styles.text2}>
-          Create your account for a better{'\n'}experience
-        </Text>
+        Sign in for a better experience</Text>
         <Pressable style={styles.button}>
           <Link href={"/phoneSign_up"}>
           <FontAwesome name="phone" color="#000000" size={24} style={styles.icon}/>
-          <Text style={styles.buttontext}>Sign up with a phone number</Text>
+          <Text style={styles.buttontext}>Sign in with a phone number</Text>
           </Link>
         </Pressable>
 
         <Pressable style={styles.button}>
           <FontAwesome name="google" color="#000000" size={24} style={styles.icon}/>
-          <Text style={styles.buttontext}>Sign up with Google</Text>
+          <Text style={styles.buttontext}>Sign in with Google</Text>
         </Pressable>
 
         <Pressable style={styles.button}>
         <Link href={"/emailSign_up"}>
           <FontAwesome name="phone" color="#000000" size={24} style={styles.icon}/>
-          <Text style={styles.buttontext}>Sign up with email</Text>
+          <Text style={styles.buttontext}>Sign in with email</Text>
           </Link>
         </Pressable>
         <Text style={styles.textsign}>Have an account? Sign in{' '}
-          <Link href={'/sign_in'}>
+          {/* <Link href={'/emailSign_up'}> */}
           <Text style={{color :'red'}}>Sign in</Text>
-          </Link>
+          {/* </Link> */}
         </Text>
       </View>
   );

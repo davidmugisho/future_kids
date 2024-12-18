@@ -19,6 +19,8 @@ export default function RootLayout() {
   <Stack.Screen name="loading" options={{ headerShown: false }} />
   <Stack.Screen name="emailSign_up" options={{ headerShown: false }} />
   <Stack.Screen name="VerifyEmail" options={{ headerShown: false }} />
+  <Stack.Screen name="sign_in" options={{ title:'Sign in' ,headerShown: false,  headerLeft : () => <></>}}/>
+
 
   </Stack>
 
