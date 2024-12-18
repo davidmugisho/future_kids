@@ -29,8 +29,10 @@ export default function SignupScreen () {
         </Pressable>
 
         <Pressable style={styles.button}>
+        <Link href={"/emailSign_up"}>
           <FontAwesome name="phone" color="#000000" size={24} style={styles.icon}/>
           <Text style={styles.buttontext}>Sign up with email</Text>
+          </Link>
         </Pressable>
         <Text style={styles.textsign}>Have an account? Sign in{' '}
           <Text style={{color :'red'}}>Sign in</Text>

@@ -15,8 +15,12 @@ export default function RootLayout() {
   <Stack.Screen name="sign_up" options={{ title:'Sign up' ,headerShown: false,  headerLeft : () => <></>}}/>
   <Stack.Screen name="phoneSign_up" options={{ title: 'phoneSign up', headerShown: false , headerLeft:() => <></>}}/>
   <Stack.Screen name="verifyPhone" options={{ headerShown: false }} />
-<Stack.Screen name="setPasswordNumber" options={{ headerShown: false }} />
+  <Stack.Screen name="setPasswordNumber" options={{ headerShown: false }} />
   <Stack.Screen name="loading" options={{ headerShown: false }} />
+  <Stack.Screen name="emailSign_up" options={{ headerShown: false }} />
+  <Stack.Screen name="verifyEmail" options={{ headerShown: false }} />
+
+
 
   </Stack>
 
