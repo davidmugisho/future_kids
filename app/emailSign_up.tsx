@@ -34,7 +34,7 @@ export default function emailSign_upScreen() {
         <Entypo name="cross" size={25} color="#6C7275" />
       </Pressable>
       <Text style={styles.text}>Your email address</Text>
-      <Text style={styles.text1}>Provide your email number to sign up</Text>
+      <Text style={styles.text1}>Provide your email address to sign up</Text>
 
       {/* Input with phone icon */}
       <Pressable style={styles.inputContainer}>

@@ -7,9 +7,7 @@ import Entypo from '@expo/vector-icons/Entypo';
 
 
 
-// export const unstable_settings = {
-//   headerShown: false, // This removes the header for this screen
-// };
+
 
 export default function verifyPhoneScreen () {
 
@@ -18,10 +16,11 @@ export default function verifyPhoneScreen () {
     console.log("Close button pressed");
   }
     return(
-      <>
+  <>
       <Pressable style={styles.closeButton} onPress={handleClose}>
       <Entypo name="arrow-left" size={25} color="#6C7275" />
       </Pressable>
+
       <View style={styles.container}>
         <Text style={styles.text}>Verify your number</Text>
         <Text style={styles.text1}>Enter verification code sent to{' '}
@@ -30,7 +29,7 @@ export default function verifyPhoneScreen () {
         <Pressable style={styles.inputContainer}>
           <Text style={styles.buttonText}>Verification code</Text>
         </Pressable>
-        <View style={styles.buttonContainer}>
+        <View style={styles.buttonContainer}>s
             <Link href="/setpasswordnumber">
               <Text style={styles.buttonText1}>Continue</Text>
             </Link>
@@ -38,9 +37,11 @@ export default function verifyPhoneScreen () {
           <Text style={styles.text2}>Haven’t got the code? Resend code</Text>
       </View>
       </>
+      
   );
 };
 const styles = StyleSheet.create({
+
     container:{
     width: 311, // Fixed width
     height: 368, // Hug height
@@ -117,6 +118,14 @@ const styles = StyleSheet.create({
       justifyContent: 'center',
       alignItems: 'center',
       color: '#6C7275'
+      // position: 'absolute',
+      // top: 15, // Distance from the top of the page
+      // left: 15, // Distance from the left edge
+      // width: 40, // Increased width for better accessibility
+      // height: 40, // Increased height for better accessibility
+      // justifyContent: 'center',
+      // alignItems: 'center',
+      // zIndex: 1, // Ensure it's above other elements
     }
 
   });
