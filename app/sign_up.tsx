@@ -1,17 +1,16 @@
 import { Redirect } from 'expo-router';
 import react from 'react';
 import { Link } from 'expo-router';
-import { View ,Text,  StyleSheet, Pressable} from 'react-native';
+import { View ,Text,  StyleSheet, Pressable, Image} from 'react-native';
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 
 
-// export const unstable_settings = {
-//   headerShown: false, // This removes the header for this screen
-// };
+
 
 export default function SignupScreen () {
     return(
       <View style={styles.container}>
+          <View style={styles.handle}></View>
         <Text style={styles.text}>Set up your account</Text>
         <Text style={styles.text2}>
           Create your account for a better{'\n'}experience
@@ -24,13 +23,17 @@ export default function SignupScreen () {
         </Pressable>
 
         <Pressable style={styles.button}>
-          <FontAwesome name="google" color="#000000" size={24} style={styles.icon}/>
+        <Image
+        source={require('../assets/images/googleloogo.jpg')}
+        style={styles.googleIcon}
+      />
+          {/* <FontAwesome name="google" color="#000000" size={24} style={styles.icon}/> */}
           <Text style={styles.buttontext}>Sign up with Google</Text>
         </Pressable>
 
         <Pressable style={styles.button}>
         <Link href={"/emailSign_up"}>
-          <FontAwesome name="phone" color="#000000" size={24} style={styles.icon}/>
+          <FontAwesome name="phone" color="#000000" size={24}  style={styles.icon}/>
           <Text style={styles.buttontext}>Sign up with email</Text>
           </Link>
         </Pressable>
@@ -43,74 +46,79 @@ export default function SignupScreen () {
   );
 };
 const styles = StyleSheet.create({
-    
-    container:{
-        
-        width: 311, // Fixed width
-        height: 368, // Hug height
-        marginTop: 180, // Top offset
-        marginLeft: 32, // Left offset 
-        gap: 32, // Vertical gap (spacing between children)
-        backgroundColor: '#EFEFEF', // Optional: Background color
-        justifyContent: 'center', // Center items vertically
-        alignItems: 'center', // Center items horizontally
-        borderRadius: 16, // Optional: Rounded corners  
+    container: {
+      width: 311, 
+      height: 368, 
+      marginTop: 180, 
+      marginLeft: 32, 
+      gap: 32, 
+      backgroundColor: '#EFEFEF', 
+      justifyContent: 'center', 
+      alignItems: 'center', 
+      borderRadius: 16, 
     },
-    text:{
-        color:'#141718',
-        width: 311,
-        height: 40,
-        fontFamily: 'Inter',
-        fontWeight: '900',
-        fontSize: 26,
-        lineHeight: 40,
-        letterSpacing: -0.48, // -2% letter spacing (24 * -2% = -0.48)
-        textAlign: 'center', 
+    handle: {
+      width: 70, 
+      height: 8, 
+      borderRadius: 5, 
+      backgroundColor: '#E0E0E0', 
+      marginBottom: 20, 
     },
-    text2:{
-        tintColor:'#6C7275',
-        width: 311,
-        fontFamily: 'Inter',
-        fontWeight: '500',
-        fontSize:16,
-        lineHeight: 24,
-        letterSpacing: -0.48, 
-        textAlign: 'center',
+    text: {
+      color: '#141718',
+      width: 311,
+      height: 40,
+      fontFamily: 'Inter',
+      fontWeight: '900',
+      fontSize: 26,
+      lineHeight: 40,
+      letterSpacing: -0.48,
+      textAlign: 'center',
     },
-    button:{
-    backgroundColor: '#E8ECEF',
-    borderRadius: 15,
-    width: 311,
-    height: 56,
-    flexDirection: 'row', 
-    alignItems: 'center', 
-    justifyContent: 'center', 
-    paddingHorizontal: 16,
-    gap: 8,
-
+    text2: {
+      tintColor: '#6C7275',
+      width: 311,
+      fontFamily: 'Inter',
+      fontWeight: '500',
+      fontSize: 16,
+      lineHeight: 24,
+      letterSpacing: -0.48,
+      textAlign: 'center',
     },
-    buttontext:{
-    fontWeight: '700',
-    fontSize: 16,
-    lineHeight: 24,
-    fontFamily: 'Inter',
-    letterSpacing: -0.48,
-    color: '#141718',
-    marginLeft: 8,
+    button: {
+      backgroundColor: '#E8ECEF',
+      borderRadius: 15,
+      width: 311,
+      height: 56,
+      flexDirection: 'row',
+      alignItems: 'center',
+      justifyContent: 'center',
+      paddingHorizontal: 16,
+      marginBottom: 5, 
     },
-    icon:{
-         marginRight: 8,
-        
+    buttontext: {
+      fontWeight: '700',
+      fontSize: 16,
+      lineHeight: 24,
+      fontFamily: 'Inter',
+      letterSpacing: -0.48,
+      color: '#141718',
+      marginLeft: 8, 
     },
-    textsign:{
-    paddingHorizontal: 16,
-        width: 325,
-        height:36,
-        fontSize: 14,
-        lineHeight:24,
-        fontWeight:500,
-
-
-    }
-
+    icon: {
+      marginRight: 12, 
+    },
+    googleIcon: {
+      width: 24,  
+      height: 24, 
+      marginRight: 12,
+    },
+    textsign: {
+      paddingHorizontal: 16,
+      width: 325,
+      height: 36,
+      fontSize: 14,
+      lineHeight: 24,
+      fontWeight: 500,
+    },
 })

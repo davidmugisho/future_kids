@@ -1,7 +1,7 @@
 import { Redirect } from 'expo-router';
 import react from 'react';
 import { Link } from 'expo-router';
-import { View ,Text,  StyleSheet, Pressable} from 'react-native';
+import { View ,Text,  StyleSheet, Pressable, Image} from 'react-native';
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 
 
@@ -16,28 +16,26 @@ export default function signinScreen () {
         <Text style={styles.text2}>
         Sign in for a better experience</Text>
         <Pressable style={styles.button}>
-          <Link href={"/phoneSign_up"}>
+          <Link href={"/Sign_in_phone"}>
           <FontAwesome name="phone" color="#000000" size={24} style={styles.icon}/>
           <Text style={styles.buttontext}>Sign in with a phone number</Text>
           </Link>
         </Pressable>
 
         <Pressable style={styles.button}>
-          <FontAwesome name="google" color="#000000" size={24} style={styles.icon}/>
+        <Image
+        source={require('../assets/images/googleloogo.jpg')}
+        style={styles.googleIcon}
+      />
           <Text style={styles.buttontext}>Sign in with Google</Text>
         </Pressable>
 
         <Pressable style={styles.button}>
-        <Link href={"/emailSign_up"}>
+        <Link href={"/Sign_in_email"}>
           <FontAwesome name="phone" color="#000000" size={24} style={styles.icon}/>
           <Text style={styles.buttontext}>Sign in with email</Text>
           </Link>
         </Pressable>
-        <Text style={styles.textsign}>Have an account? Sign in{' '}
-          {/* <Link href={'/emailSign_up'}> */}
-          <Text style={{color :'red'}}>Sign in</Text>
-          {/* </Link> */}
-        </Text>
       </View>
   );
 };
@@ -75,6 +73,11 @@ const styles = StyleSheet.create({
         lineHeight: 24,
         letterSpacing: -0.48, 
         textAlign: 'center',
+    },
+    googleIcon: {
+      width: 24,  
+      height: 24, 
+      marginRight: 12,
     },
     button:{
     backgroundColor: '#E8ECEF',
