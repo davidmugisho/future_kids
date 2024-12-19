@@ -43,7 +43,7 @@ export default function Signin_emailScreen() {
         <TextInput
           style={styles.input}
           placeholder="email  address"
-          placeholderTextColor="#888" // Set a darker gray for contrast
+          placeholderTextColor="#888" 
           keyboardType="email-address"
           value={email}
           onChangeText={setEmail}
@@ -55,7 +55,7 @@ export default function Signin_emailScreen() {
         <TextInput
           style={styles.input}
           placeholder="Password"
-          placeholderTextColor="#888" // Set a darker gray for contrast
+          placeholderTextColor="#888" 
           keyboardType="default"
           value={password}
           secureTextEntry={true}
@@ -64,11 +64,11 @@ export default function Signin_emailScreen() {
       </Pressable>
 
       <Pressable style={styles.button}>
-        <Link href="/verifyphone">
+        <Link href="/verifyEmail">
           <Text style={styles.buttonText}>Continue</Text>
         </Link>
       </Pressable>
-      
+      <Link href={"/sign_up"}></Link>
       <Text style={styles.text2}>Create an account {"                "}
         <Text style={styles.text2}>Forgot password</Text>
       </Text>

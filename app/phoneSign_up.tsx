@@ -30,17 +30,18 @@ export default function PhoneSignUpScreen() {
       behavior={Platform.OS === 'ios' ? 'padding' : undefined}
     >
       <Pressable style={styles.closeButton} onPress={handleClose}>
-        <Entypo name="cross" size={20} color="#6C7275" />
+        <Entypo name="cross" size={25} color="#6C7275" />
       </Pressable>
       <Text style={styles.text}>Your Phone Number</Text>
       <Text style={styles.text1}>Provide your phone number to sign up</Text>
 
       {/* Input with phone icon */}
       <Pressable style={styles.inputContainer}>
-        <FontAwesome name="phone" size={24} color="#000000" style={styles.icon} />
+        <FontAwesome name="phone" size={24} color="#6C7275" style={styles.icon} />
         <TextInput
           style={styles.input}
           placeholder="Enter your phone number"
+          placeholderTextColor="#888" 
           keyboardType="phone-pad"
           value={phoneNumber}
           onChangeText={setPhoneNumber}
@@ -52,6 +53,11 @@ export default function PhoneSignUpScreen() {
           <Text style={styles.buttonText}>Continue</Text>
         </Link>
       </Pressable>
+      <Text style={styles.text2}>Have an account?{'  '} 
+        <Link href={"/Sign_in_phone"}>
+        <Text style={{color:'red'}}>Sign in</Text>
+        </Link>
+      </Text>
     </KeyboardAvoidingView>
   );
 }
@@ -71,8 +77,9 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   text1: {
-    fontSize: 16,
-    color: '#6C7275',
+    fontSize: 14,
+    fontWeight:500,
+    color: '#141718',
     textAlign: 'center',
     marginBottom: 20,
   },
@@ -117,4 +124,7 @@ const styles = StyleSheet.create({
       alignItems: 'center',
     
   },
+  text2:{
+    padding:20
+  }
 });

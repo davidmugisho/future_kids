@@ -1,8 +1,13 @@
 import { Redirect } from 'expo-router';
 import react from 'react';
 import { Link } from 'expo-router';
-import { View ,Text,  StyleSheet, Pressable} from 'react-native';
+
+import React, { useState } from 'react';
+
+import { View ,Text,  StyleSheet,TextInput, Pressable, KeyboardAvoidingView, Platform} from 'react-native';
 import FontAwesome from '@expo/vector-icons/FontAwesome';
+import Entypo from '@expo/vector-icons/Entypo';
+
 
 
 // export const unstable_settings = {
@@ -10,16 +15,47 @@ import FontAwesome from '@expo/vector-icons/FontAwesome';
 // };
 
 export default function setPasswordNumber () {
+  const [phoneNumber, setPhoneNumber] = useState('');
+  const [password, setPassword] = useState('');
+
+
+  const handleClose = () => {
+    console.log("Close button pressed");
+  }
     return(
-      <View style={styles.container}>
+      <>
+       <Pressable style={styles.closeButton} onPress={handleClose}>
+      <Entypo name="arrow-left" size={25} color="#6C7275" />
+      </Pressable>
+      <KeyboardAvoidingView style={styles.container}
+      behavior={Platform.OS === 'ios' ? 'padding' : undefined}
+>
         <Text style={styles.text}>Set your password</Text>
         <Text style={styles.text1}>Set the password for your account</Text>
         <Pressable style={styles.inputContainer}>
-          <Text style={styles.buttonText}>Password</Text>
+          {/* <Text style={styles.buttonText}>Password</Text> */}
+          <FontAwesome name="lock" size={24} color="#6C7275" style={styles.icon} />
+        <TextInput
+          style={styles.input}
+          placeholder="Password"
+          placeholderTextColor="#888" 
+          keyboardType="default"
+          value={phoneNumber}
+          onChangeText={setPhoneNumber}
+        />
         </Pressable>
 
-        <Pressable style={styles.inputContainer1}>
-          <Text style={styles.buttonText}>Confirm Password</Text>
+        <Pressable style={styles.inputContainer}>
+        <FontAwesome name="lock" size={24} color="#6C7275" style={styles.icon} />
+        <TextInput
+          style={styles.input}
+          placeholder="Confirm Password"
+          placeholderTextColor="#888" 
+          keyboardType="default"
+          value={phoneNumber}
+          onChangeText={setPhoneNumber}
+        />
+          {/* <Text style={styles.buttonText}>Confirm Password</Text> */}
         </Pressable>
 
         <View style={styles.buttonContainer}>
@@ -27,20 +63,31 @@ export default function setPasswordNumber () {
               <Text style={styles.buttonText1}>Submit</Text>
             </Link>
           </View>
-      </View>
+      </KeyboardAvoidingView>
+      </>
   );
 };
 const styles = StyleSheet.create({
     container:{
-    width: 311, // Fixed width
-    height: 368, // Hug height
-    marginTop: 180, // Top offset
-    marginLeft: 32, // Left offset
-    gap: 32, // Vertical gap (spacing between children)
-    backgroundColor: '#EFEFEF', // Optional: Background color
-    justifyContent: 'center', // Center items vertically
-    alignItems: 'center', // Center items horizontally
-    borderRadius: 16, // Optional: Rounded corners
+    width: 311, 
+    height: 368, 
+    marginTop: 180, 
+    marginLeft: 32,
+    gap: 32, 
+    backgroundColor: '#EFEFEF', 
+    justifyContent: 'center', 
+    alignItems: 'center', 
+    borderRadius: 16,
+    padding:20,
+    },
+    input: {
+      flex: 1,
+      fontSize: 16,
+      color: '#141718',
+    },
+
+    icon: {
+      marginRight: 10,
     },
     text:{
       fontSize:45,
@@ -76,26 +123,27 @@ const styles = StyleSheet.create({
       color:'#6C7275'
     },
     inputContainer:{
-        // flexDirection: 'row',
-        alignItems: 'flex-start',
-        justifyContent:'center',
+        alignItems: 'center',
+        // justifyContent:'center',
         borderRadius: 12,
-        paddingHorizontal: 12,
+        paddingHorizontal: 16,
         width: 311,
         height: 60,
         backgroundColor: '#F3F5F7',
-    },
-    inputContainer1:{
-        // flexDirection: 'row',
-        alignItems: 'flex-start',
-        justifyContent:'center',
-        borderRadius: 12,
-        paddingHorizontal: 12,
-        width: 311,
-        height: 60,
-        backgroundColor: '#F3F5F7',
+        marginBottom: -0.5,
+        flexDirection:'row',
 
     },
+    // inputContainer1:{
+    //     alignItems: 'flex-start',
+    //     justifyContent:'center',
+    //     borderRadius: 12,
+    //     paddingHorizontal: 12,
+    //     width: 311,
+    //     height: 60,
+    //     backgroundColor: '#F3F5F7',
+
+    // },
     buttonText1:{
       color: '#FEFEFE',
       fontSize: 16,
@@ -103,5 +151,14 @@ const styles = StyleSheet.create({
       lineHeight: 24,
       fontFamily: 'Inter',
       letterSpacing: 0.24,
+    },
+    closeButton:{
+      position: 'absolute',
+      top: 95,
+      left: 50,
+      width: 18.67,
+      height: 18.67,
+      justifyContent: 'center',
+      alignItems: 'center',
     }
   });

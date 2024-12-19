@@ -3,6 +3,8 @@ import react from 'react';
 import { Link } from 'expo-router';
 import { View ,Text,  StyleSheet, Pressable} from 'react-native';
 import FontAwesome from '@expo/vector-icons/FontAwesome';
+import Entypo from '@expo/vector-icons/Entypo';
+
 
 
 // export const unstable_settings = {
@@ -10,7 +12,16 @@ import FontAwesome from '@expo/vector-icons/FontAwesome';
 // };
 
 export default function verifyPhoneScreen () {
+
+  const handleClose = () => {
+    // Implement the functionality for the close button (e.g., navigation back)
+    console.log("Close button pressed");
+  }
     return(
+      <>
+      <Pressable style={styles.closeButton} onPress={handleClose}>
+      <Entypo name="arrow-left" size={25} color="#6C7275" />
+      </Pressable>
       <View style={styles.container}>
         <Text style={styles.text}>Verify your number</Text>
         <Text style={styles.text1}>Enter verification code sent to{' '}
@@ -26,6 +37,7 @@ export default function verifyPhoneScreen () {
           </View>
           <Text style={styles.text2}>Haven’t got the code? Resend code</Text>
       </View>
+      </>
   );
 };
 const styles = StyleSheet.create({
@@ -95,6 +107,16 @@ const styles = StyleSheet.create({
       letterSpacing:0.12,
       color:'#6C7275'
 
+    },
+    closeButton:{
+      position: 'absolute',
+      top: 95,
+      left: 50,
+      width: 18.67,
+      height: 18.67,
+      justifyContent: 'center',
+      alignItems: 'center',
+      color: '#6C7275'
     }
 
   });

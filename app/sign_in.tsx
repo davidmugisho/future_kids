@@ -32,7 +32,7 @@ export default function signinScreen () {
 
         <Pressable style={styles.button}>
         <Link href={"/Sign_in_email"}>
-          <FontAwesome name="phone" color="#000000" size={24} style={styles.icon}/>
+          <FontAwesome name="envelope" color="#000000" size={24} style={styles.icon}/>
           <Text style={styles.buttontext}>Sign in with email</Text>
           </Link>
         </Pressable>

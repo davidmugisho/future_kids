@@ -33,7 +33,7 @@ export default function SignupScreen () {
 
         <Pressable style={styles.button}>
         <Link href={"/emailSign_up"}>
-          <FontAwesome name="phone" color="#000000" size={24}  style={styles.icon}/>
+          <FontAwesome name="envelope" color="#000000" size={24}  style={styles.icon}/>
           <Text style={styles.buttontext}>Sign up with email</Text>
           </Link>
         </Pressable>

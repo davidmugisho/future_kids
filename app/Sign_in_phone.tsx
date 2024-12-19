@@ -42,8 +42,7 @@ export default function Signin_phoneScreen() {
         <TextInput
           style={styles.input}
           placeholder="Enter your phone number"
-          placeholderTextColor="#888" // Set a darker gray for contrast
-
+          placeholderTextColor="#888" 
           keyboardType="phone-pad"
           value={phoneNumber}
           onChangeText={setPhoneNumber}
@@ -55,7 +54,7 @@ export default function Signin_phoneScreen() {
         <TextInput
           style={styles.input}
           placeholder="Password"
-          placeholderTextColor="#888" // Set a darker gray for contrast
+          placeholderTextColor="#888" 
           keyboardType="default"
           value={password}
           secureTextEntry={true}

@@ -18,6 +18,7 @@ import Entypo from '@expo/vector-icons/Entypo';
 
 export default function emailSign_upScreen() {
   const [phoneNumber, setPhoneNumber] = useState('');
+  const [email, setEmail] = useState('');
 
   const handleClose = () => {
     // Implement the functionality for the close button (e.g., navigation back)
@@ -30,20 +31,21 @@ export default function emailSign_upScreen() {
       behavior={Platform.OS === 'ios' ? 'padding' : undefined}
     >
       <Pressable style={styles.closeButton} onPress={handleClose}>
-        <Entypo name="cross" size={20} color="#6C7275" />
+        <Entypo name="cross" size={25} color="#6C7275" />
       </Pressable>
       <Text style={styles.text}>Your email address</Text>
       <Text style={styles.text1}>Provide your email number to sign up</Text>
 
       {/* Input with phone icon */}
       <Pressable style={styles.inputContainer}>
-        <FontAwesome name="phone" size={24} color="#000000" style={styles.icon} />
+        <FontAwesome name="envelope" size={24} color="#6C7275" style={styles.icon} />
         <TextInput
           style={styles.input}
           placeholder="email  address"
-          keyboardType="phone-pad"
-          value={phoneNumber}
-          onChangeText={setPhoneNumber}
+          placeholderTextColor="#888" 
+          keyboardType="default"
+          value={email}
+          onChangeText={setEmail}
         />
       </Pressable>
 
@@ -52,8 +54,10 @@ export default function emailSign_upScreen() {
           <Text style={styles.buttonText}>Continue</Text>
         </Link>
       </Pressable>
-      <Text style={styles.text2}>Have an account? 
+      <Text style={styles.text2}>Have an account? {'   '}
+        <Link href={"/Sign_in_email"}>
         <Text style={{color:'red'}}>Sign in</Text>
+        </Link>
       </Text>
 
     </KeyboardAvoidingView>
@@ -75,9 +79,11 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   text1: {
-    fontSize: 16,
-    color: '#6C7275',
-    textAlign: 'center',
+    fontSize: 14,
+    color: '#141817',
+    fontWeight:500,
+    // textAlign: 'center',
+    letterSpacing:-0.24,
     marginBottom: 20,
   },
   inputContainer: {
@@ -127,6 +133,7 @@ const styles = StyleSheet.create({
   fontWeight:500,
   fontFamily:'Inter',
   letterSpacing:0.12,
-  color:'#141718'
+  color:'#141718',
+  padding:20,
 },
 });
