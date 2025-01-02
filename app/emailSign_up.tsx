@@ -31,6 +31,7 @@ export default function emailSign_upScreen() {
       behavior={Platform.OS === 'ios' ? 'padding' : undefined}
     >
       <Pressable style={styles.closeButton} onPress={handleClose}>
+
         <Entypo name="cross" size={25} color="#6C7275" />
       </Pressable>
       <Text style={styles.text}>Your email address</Text>
@@ -54,11 +55,13 @@ export default function emailSign_upScreen() {
           <Text style={styles.buttonText}>Continue</Text>
         </Link>
       </Pressable>
-      <Text style={styles.text2}>Have an account? {'   '}
-        <Link href={"/Sign_in_email"}>
-        <Text style={{color:'red'}}>Sign in</Text>
+      <View style={styles.text2}>
+          <Text>Have an account?{' '} 
+          <Text style={{ color: 'red' }}> Sign in</Text>
+          </Text>
+        <Link href="/Sign_in_email">
         </Link>
-      </Text>
+      </View>
 
     </KeyboardAvoidingView>
   );
