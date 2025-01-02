@@ -6,6 +6,7 @@ import { Link } from 'expo-router';
 import { 
    
   Text, 
+  View,
   StyleSheet, 
   TextInput, 
   Pressable, 
@@ -17,7 +18,7 @@ import Entypo from '@expo/vector-icons/Entypo';
 
 
 
-export default function PhoneSignUpScreen() {
+export default function () {
   const [phoneNumber, setPhoneNumber] = useState('');
   const router = useRouter();
 
@@ -55,17 +56,15 @@ export default function PhoneSignUpScreen() {
           <Text style={styles.buttonText}>Continue</Text>
         </Link>
       </Pressable>
-      {/* <Text style={styles.text2}>Have an account?{'  '} 
-        <Link href={"/Sign_in_phone"}>
-        <Text style={{color:'red'}}>Sign in</Text>
-        </Link>
-      </Text> */}
- <Text style={styles.text2}>
-  Have an account?{' '}
-  <Text style={{ color: 'red' }} onPress={() => router.push('/Sign_in_phone')}>
-    Sign in
-  </Text>
-</Text>
+
+<View style={styles.text2}>
+    <Text>Have an account?{' '} 
+    <Text style={{ color: 'red' }}> Sign in</Text>
+    </Text>
+  <Link href="/Sign_in_phone">
+  </Link>
+</View>
+
 
     </KeyboardAvoidingView>
   );
