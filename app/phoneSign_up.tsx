@@ -1,15 +1,16 @@
 
 import { Redirect } from 'expo-router'; 
 import React, { useState } from 'react';
+import { useRouter } from 'expo-router';
 import { Link } from 'expo-router';
 import { 
-  View, 
+   
   Text, 
   StyleSheet, 
   TextInput, 
   Pressable, 
   KeyboardAvoidingView, 
-  Platform 
+  Platform ,
 } from 'react-native';
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 import Entypo from '@expo/vector-icons/Entypo';
@@ -18,6 +19,7 @@ import Entypo from '@expo/vector-icons/Entypo';
 
 export default function PhoneSignUpScreen() {
   const [phoneNumber, setPhoneNumber] = useState('');
+  const router = useRouter();
 
   const handleClose = () => {
     // Implement the functionality for the close button (e.g., navigation back)
@@ -53,11 +55,18 @@ export default function PhoneSignUpScreen() {
           <Text style={styles.buttonText}>Continue</Text>
         </Link>
       </Pressable>
-      <Text style={styles.text2}>Have an account?{'  '} 
+      {/* <Text style={styles.text2}>Have an account?{'  '} 
         <Link href={"/Sign_in_phone"}>
         <Text style={{color:'red'}}>Sign in</Text>
         </Link>
-      </Text>
+      </Text> */}
+ <Text style={styles.text2}>
+  Have an account?{' '}
+  <Text style={{ color: 'red' }} onPress={() => router.push('/Sign_in_phone')}>
+    Sign in
+  </Text>
+</Text>
+
     </KeyboardAvoidingView>
   );
 }
