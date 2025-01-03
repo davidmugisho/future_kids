@@ -27,6 +27,7 @@ export default function RootLayout() {
   <Stack.Screen name="reset_password" options={{headerShown : false}} />
   <Stack.Screen name="reset_password_verification" options={{headerShown:false}}/>
   <Stack.Screen name="set_new_password" options={{headerShown: false}}/>
+  <Stack.Screen name="reset_password_sign_in_phone" options={{headerShown:false}}/>
 
 
 
