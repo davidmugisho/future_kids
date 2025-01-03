@@ -9,7 +9,8 @@ import {
   TextInput, 
   Pressable, 
   KeyboardAvoidingView, 
-  Platform 
+  Platform, 
+  Linking
 } from 'react-native';
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 import Entypo from '@expo/vector-icons/Entypo';
@@ -64,13 +65,19 @@ export default function Signin_emailScreen() {
       </Pressable>
 
       <Pressable style={styles.button}>
-        <Link href="/verifyEmail">
+        <Link href="/loading">
           <Text style={styles.buttonText}>Continue</Text>
         </Link>
       </Pressable>
-      <Link href={"/sign_up"}></Link>
-      <Text style={styles.text2}>Create an account {"                "}
-        <Text style={styles.text2}>Forgot password</Text>
+
+      <Text style={styles.text2}>
+      <Link href="/sign_up" style={[styles.text2, { color: 'red' }]}>
+    Create an account
+      </Link>
+              {"                "}
+   <Link href="/reset_password" style={[styles.text2, { color: 'red' }]}>
+    Forgot password
+  </Link>
       </Text>
       
     </KeyboardAvoidingView>
