@@ -3,6 +3,7 @@ import { View, StyleSheet, Text , KeyboardAvoidingView, Platform, Pressable, Tex
 import Entypo from '@expo/vector-icons/Entypo';
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 import { Link } from 'expo-router';
+import { Colors } from 'react-native/Libraries/NewAppScreen';
 
 
 
@@ -34,11 +35,16 @@ export default function resetPaaword() {
 
     </Pressable>
     <Pressable style={styles.button}>
-            <Link href="/loading">
+            <Link href="/reset_password_verification">
               <Text style={styles.buttonText}>Continue</Text>
             </Link>
           </Pressable>
-          <Text>Remember password? {"  "}Sign in </Text>
+          <Text style={styles.text2}>
+          <Text>Remember password? {"  "} 
+
+          </Text>
+          <Link href={"/Sign_in_email"} style={[ {color:'red'} ]}> Sign in </Link>
+          </Text>
 
    </KeyboardAvoidingView>
   );
@@ -93,6 +99,10 @@ const styles = StyleSheet.create({
     color: '#FFFFFF',
     fontSize: 16,
     fontWeight: 'bold',
+  },
+  text2:{
+    paddingTop: 20
   }
+ 
   
 });
