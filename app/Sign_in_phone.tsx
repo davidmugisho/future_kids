@@ -63,7 +63,7 @@ export default function Signin_phoneScreen() {
       </Pressable>
 
       <Pressable style={styles.button}>
-        <Link href="/verifyphone">
+        <Link href="/loading">
           <Text style={styles.buttonText}>Continue</Text>
         </Link>
       </Pressable>
