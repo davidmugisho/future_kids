@@ -67,10 +67,15 @@ export default function Signin_phoneScreen() {
           <Text style={styles.buttonText}>Continue</Text>
         </Link>
       </Pressable>
-      
-      <Text style={styles.text2}>Create an account {"                "}
-        <Text style={styles.text2}>Forgot password</Text>
-      </Text>
+         <Text style={styles.text2}>
+           <Link href="/sign_up" style={[styles.text2, { color: 'red' }]}>
+         Create an account
+           </Link>
+                   {"                "}
+        <Link href="/reset_password_sign_in_phone" style={[styles.text2, { color: 'red' }]}>
+         Forgot password
+       </Link>
+           </Text>
       
     </KeyboardAvoidingView>
   );
